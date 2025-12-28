@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "About Santosh P Swamynathan"
+description: "About Santosh Pandurangan Swamynathan"
 showDate: false
 showAuthor: false
 showReadingTime: false
@@ -25,10 +25,12 @@ Senior Site Reliability Engineer at Microsoft Azure, specializing in large-scale
 - Healthcare Infrastructure (Epic EHR, VMware)
 
 **Connect:**
-- GitHub: [Quokkakoala](https://github.com/Quokkakoala)
+- GitHub: [Quokkakoala](https://github.com/Quokkakoala) 🦘🐨
 - LinkedIn: [santosh-swamynathan](https://www.linkedin.com/in/santosh-swamynathan/)
 - Email: santoshswamynathan@outlook.com
 
 ---
 
 *The postings on this site are my own and don't necessarily represent Microsoft's positions, strategies or opinions.*
+
+<small style="opacity: 0.5;">psst... curious about the name? [🦘🐨](/easter-egg/quokkakoala)</small>
