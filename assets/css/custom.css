@@ -1,0 +1,21 @@
+/* Custom styles using jsDelivr fonts */
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
+
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Wider content container */
+.prose {
+  max-width: 75ch !important;
+}
+
+/* Better spacing */
+.max-w-7xl {
+  max-width: 85rem !important;
+}
+
+/* Cleaner header */
+header {
+  backdrop-filter: blur(10px);
+}

@@ -1,14 +1,13 @@
 colorScheme = "blowfish"
 defaultAppearance = "dark"
-autoSwitchAppearance = false
+autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
 mainSections = ["sre", "gpu", "general"]
-robots = ""
 
 [header]
-  layout = "basic"
+  layout = "fixed-fill"
 
 [footer]
   showCopyright = true
@@ -17,20 +16,20 @@ robots = ""
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
+  layout = "page"
   showRecent = true
-  recentLimit = 6
+  showRecentItems = 5
+  cardView = true
 
 [article]
+  showHero = true
+  heroStyle = "background"
   showDate = true
-  showDateUpdated = false
   showAuthor = true
-  showBreadcrumbs = true
+  showBreadcrumbs = false
   showDraftLabel = true
-  showEdit = false
   showHeadingAnchors = true
   showPagination = true
-  invertPagination = false
   showReadingTime = true
   showTableOfContents = true
   showTaxonomies = true
@@ -39,22 +38,11 @@ robots = ""
   sharingLinks = ["linkedin", "twitter", "email"]
 
 [list]
-  showBreadcrumbs = true
+  showBreadcrumbs = false
   showSummary = true
   showTableOfContents = false
   showCards = true
   groupByYear = true
-
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
-[fathomAnalytics]
-  site = ""
-
-[verification]
-  google = ""
-  bing = ""
-  pinterest = ""
-  yandex = ""
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundHeaderSpace = false
