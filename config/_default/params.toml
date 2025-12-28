@@ -16,7 +16,8 @@ mainSections = ["sre", "gpu", "general"]
   showScrollToTop = true
 
 [homepage]
-  layout = "page"
+  layout = "profile"
+  homepageImage = "images/profile.png"
   showRecent = true
   showRecentItems = 5
   cardView = true
@@ -44,5 +45,3 @@ mainSections = ["sre", "gpu", "general"]
   showCards = true
   groupByYear = true
   cardView = true
-  cardViewScreenWidth = false
-  layoutBackgroundHeaderSpace = false
