@@ -12,7 +12,7 @@ title = "Santosh P Swamynathan"
   
   [author]
     name = "Santosh P Swamynathan"
-    image = ""
+    image = "images/profile.png"
     headline = "Senior Site Reliability Engineer @ Microsoft Azure"
     bio = "I work on large-scale GPU infrastructure and reliability engineering. From healthcare systems to AI platforms, I focus on keeping critical infrastructure running at scale."
     links = [
