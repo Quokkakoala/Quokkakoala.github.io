@@ -23,7 +23,7 @@ Check out my latest writing on SRE, GPU infrastructure, and cloud technologies.
 
 - **[SRE](/sre)** - Site reliability engineering, automation, and best practices
 - **[GPU Infrastructure](/gpu)** - Large-scale GPU deployments, firmware, and management  
-- **[General](/general)** - Linux, Kubernetes, and infrastructure topics
+- **[Infrastructure & DevOps](/general)** - Linux, Kubernetes, and cloud-native technologies
 
 ---
 

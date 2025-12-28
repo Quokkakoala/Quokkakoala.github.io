@@ -9,7 +9,7 @@
   weight = 20
 
 [[main]]
-  name = "General"
+  name = "Infrastructure & DevOps"
   pageRef = "general"
   weight = 30
 
