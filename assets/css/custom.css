@@ -1,36 +1,35 @@
-/* Import Inter font from jsDelivr */
+/* Import fonts from jsDelivr */
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@1.0.6/index.min.css');
 
 :root {
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
   font-family: var(--font-body);
 }
 
-code, pre {
-  font-family: var(--font-mono);
+/* Fix photo size on homepage */
+.prose figure img {
+  max-width: 250px !important;
+  height: auto !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 2rem auto;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Center content nicely */
+.prose {
+  max-width: 65ch;
 }
 
-/* Better link hover */
-a {
-  transition: color 0.2s ease;
+/* Consistent headings */
+h1, h2, h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
 }
 
-/* Improved card shadows */
-article {
-  transition: all 0.3s ease;
-}
-
-article:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Better spacing */
+.prose > * + * {
+  margin-top: 1.5em;
 }

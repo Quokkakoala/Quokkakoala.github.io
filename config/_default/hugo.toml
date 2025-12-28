@@ -1,8 +1,8 @@
 baseURL = "https://srestack.dev/"
 theme = "blowfish"
 languageCode = "en"
-title = "Santosh P Swamynathan"
-copyright = "© 2025 Santosh P Swamynathan"
+title = "Santosh Pandurangan Swamynathan"
+copyright = "© 2025 Santosh Pandurangan Swamynathan"
 
 enableRobotsTXT = true
 summaryLength = 30
