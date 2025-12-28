@@ -1,21 +1,36 @@
-/* Custom styles using jsDelivr fonts */
+/* Import Inter font from jsDelivr */
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@1.0.6/index.min.css');
 
 :root {
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* Wider content container */
-.prose {
-  max-width: 75ch !important;
+body {
+  font-family: var(--font-body);
 }
 
-/* Better spacing */
-.max-w-7xl {
-  max-width: 85rem !important;
+code, pre {
+  font-family: var(--font-mono);
 }
 
-/* Cleaner header */
-header {
-  backdrop-filter: blur(10px);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better link hover */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Improved card shadows */
+article {
+  transition: all 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

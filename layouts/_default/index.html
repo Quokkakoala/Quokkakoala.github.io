@@ -1,0 +1,96 @@
+{{ define "main" }}
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    
+    <!-- Left Sidebar - Profile -->
+    <div class="lg:col-span-1">
+      <div class="sticky top-24">
+        <!-- Profile Photo -->
+        {{ if .Site.Params.author.image }}
+        <img src="{{ .Site.Params.author.image }}" alt="{{ .Site.Params.author.name }}" 
+             class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-primary-200 dark:border-primary-800">
+        {{ else }}
+        <div class="w-32 h-32 rounded-full mx-auto mb-6 bg-primary-200 dark:bg-primary-800 flex items-center justify-center">
+          <span class="text-4xl font-bold text-primary-600 dark:text-primary-400">{{ substr .Site.Params.author.name 0 1 }}</span>
+        </div>
+        {{ end }}
+        
+        <!-- Name & Title -->
+        <h1 class="text-2xl font-bold text-center mb-2">{{ .Site.Params.author.name }}</h1>
+        <p class="text-center text-neutral-600 dark:text-neutral-400 mb-6">{{ .Site.Params.author.headline }}</p>
+        
+        <!-- Bio -->
+        <div class="prose dark:prose-invert text-sm mb-6">
+          <p>{{ .Site.Params.author.bio }}</p>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex justify-center gap-4 mb-8">
+          {{ range .Site.Params.author.links }}
+            {{ range $key, $value := . }}
+              <a href="{{ $value }}" target="_blank" rel="noopener noreferrer" 
+                 class="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
+                {{ partial "icon.html" $key }}
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="space-y-2">
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="block px-4 py-2 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900 transition-colors">
+            {{ .Name }}
+          </a>
+          {{ end }}
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="lg:col-span-2">
+      <!-- Intro -->
+      <div class="prose dark:prose-invert max-w-none mb-12">
+        {{ .Content }}
+      </div>
+      
+      <!-- Recent Posts -->
+      {{ if .Site.Params.homepage.showRecent }}
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          {{ partial "icon.html" "pencil" }}
+          Recent Posts
+        </h2>
+        
+        <div class="grid gap-6">
+          {{ range first (.Site.Params.homepage.showRecentItems | default 6) (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+          <article class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-xl font-semibold">
+                <a href="{{ .RelPermalink }}" class="hover:text-primary-600 dark:hover:text-primary-400">
+                  {{ .Title }}
+                </a>
+              </h3>
+              <time class="text-sm text-neutral-600 dark:text-neutral-400">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+            </div>
+            {{ if .Params.description }}
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">{{ .Params.description }}</p>
+            {{ end }}
+            <div class="flex gap-2">
+              {{ range .Params.tags }}
+              <span class="text-xs px-2 py-1 rounded bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300">
+                {{ . }}
+              </span>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
