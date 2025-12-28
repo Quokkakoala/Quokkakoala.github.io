@@ -1,50 +1,23 @@
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
 
-:root {
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
 body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-body);
-  font-weight: 700;
-}
-
-/* Photo - smaller, left-aligned */
-.prose p img[alt="Santosh Pandurangan Swamynathan"] {
+/* Target photo directly - multiple selectors */
+article img[alt*="Santosh"],
+.article-content img[alt*="Santosh"],
+img[src*="profile.png"] {
   width: 150px !important;
   height: 150px !important;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  float: left;
-  margin: 0 1.5rem 1rem 0;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  float: left !important;
+  margin: 0 1.5rem 1rem 0 !important;
 }
 
-/* Ensure text flows nicely around photo */
-.prose::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Better heading spacing */
-.prose h2 {
-  margin-top: 0;
-  clear: none;
-}
-
-/* Consistent link colors */
-a {
-  transition: color 0.2s ease;
-}
-
-/* Better readability */
-.prose {
-  max-width: 70ch;
+/* Remove duplicate title */
+.max-w-prose > h1:first-child {
+  display: none;
 }

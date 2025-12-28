@@ -16,15 +16,11 @@ mainSections = ["sre", "gpu", "general"]
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
-  homepageImage = "images/profile.png"
+  layout = "page"
   showRecent = true
   showRecentItems = 5
-  cardView = true
 
 [article]
-  showHero = true
-  heroStyle = "background"
   showDate = true
   showAuthor = true
   showBreadcrumbs = false
@@ -44,4 +40,3 @@ mainSections = ["sre", "gpu", "general"]
   showTableOfContents = false
   showCards = true
   groupByYear = true
-  cardView = true
