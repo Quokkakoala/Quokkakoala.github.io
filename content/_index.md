@@ -1,8 +1,9 @@
 ---
 title: "Santosh P Swamynathan"
 description: "Senior Site Reliability Engineer @ Microsoft Azure"
-layout: "simple"
 ---
+
+{{< figure src="images/profile.png" alt="Santosh P Swamynathan" class="rounded-lg mx-auto mb-6" width="200" >}}
 
 # Hi folks 👋
 
