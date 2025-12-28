@@ -1,35 +1,16 @@
-/* Import fonts from jsDelivr */
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
 
-:root {
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
 body {
-  font-family: var(--font-body);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Fix photo size on homepage */
-.prose figure img {
-  max-width: 250px !important;
-  height: auto !important;
+/* Photo styling - left aligned */
+.prose p:first-of-type img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  margin: 0 auto 2rem auto;
-}
-
-/* Center content nicely */
-.prose {
-  max-width: 65ch;
-}
-
-/* Consistent headings */
-h1, h2, h3 {
-  font-family: var(--font-body);
-  font-weight: 700;
-}
-
-/* Better spacing */
-.prose > * + * {
-  margin-top: 1.5em;
+  float: left;
+  margin: 0 2rem 1rem 0;
 }
