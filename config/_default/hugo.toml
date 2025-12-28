@@ -1,0 +1,23 @@
+baseURL = "https://srestack.dev/"
+theme = "blowfish"
+languageCode = "en"
+title = "Santosh P Swamynathan"
+copyright = "© 2025 Santosh P Swamynathan"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.87.0"

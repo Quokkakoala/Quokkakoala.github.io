@@ -1,5 +1,5 @@
 ---
-title: "Santosh Swamynathan"
+title: "Santosh P Swamynathan"
 description: "Senior Site Reliability Engineer @ Microsoft Azure"
 ---
 

@@ -1,0 +1,22 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Santosh P Swamynathan"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Senior Site Reliability Engineer @ Microsoft Azure"
+  
+  [author]
+    name = "Santosh P Swamynathan"
+    image = ""
+    headline = "Senior Site Reliability Engineer @ Microsoft Azure"
+    bio = "I work on large-scale GPU infrastructure and reliability engineering. From healthcare systems to AI platforms, I focus on keeping critical infrastructure running at scale."
+    links = [
+      { github = "https://github.com/Quokkakoala" },
+      { linkedin = "https://www.linkedin.com/in/santosh-swamynathan/" },
+      { email = "mailto:santoshswamynathan@outlook.com" }
+    ]

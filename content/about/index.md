@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "About Santosh Swamynathan"
+description: "About Santosh P Swamynathan"
 showDate: false
 showAuthor: false
 showReadingTime: false

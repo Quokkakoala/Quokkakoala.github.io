@@ -1,0 +1,19 @@
+[[main]]
+  name = "SRE"
+  pageRef = "sre"
+  weight = 10
+
+[[main]]
+  name = "GPU Infrastructure"
+  pageRef = "gpu"
+  weight = 20
+
+[[main]]
+  name = "General"
+  pageRef = "general"
+  weight = 30
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 40
