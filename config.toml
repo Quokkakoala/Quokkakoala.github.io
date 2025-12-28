@@ -1,4 +1,3 @@
-# Hugo Configuration for SRE Stack Blog
 baseURL = "https://srestack.dev/"
 languageCode = "en-us"
 title = "Santosh Swamynathan"
@@ -35,13 +34,7 @@ theme = "blowfish"
     pageRef = "about"
     weight = 40
 
-  [[menu.main]]
-    name = "Archive"
-    pageRef = "archive"
-    weight = 50
-
 [params]
-  author = "Santosh Swamynathan"
   description = "Senior Site Reliability Engineer @ Microsoft Azure. Large-scale GPU infrastructure and reliability engineering."
   
   colorScheme = "blowfish"
@@ -50,6 +43,14 @@ theme = "blowfish"
   
   enableSearch = true
   enableCodeCopy = true
+  
+  [params.author]
+    name = "Santosh Swamynathan"
+    email = "santoshswamynathan@outlook.com"
+    links = [
+      { github = "https://github.com/Quokkakoala" },
+      { linkedin = "https://www.linkedin.com/in/santosh-swamynathan/" }
+    ]
   
   [params.footer]
     showCopyright = true
@@ -61,29 +62,14 @@ theme = "blowfish"
     layout = "profile"
     showRecent = true
     showRecentItems = 6
-    showMoreLink = true
-    showMoreLinkDest = "/blog"
 
   [params.article]
     showDate = true
     showAuthor = true
     showBreadcrumbs = true
-    showDraftLabel = true
-    showHeadingAnchors = true
-    showPagination = true
     showReadingTime = true
     showTableOfContents = true
-    showTaxonomies = true
-    showComments = false
-    sharingLinks = ["linkedin", "twitter", "reddit", "email"]
-
-  [params.list]
-    showBreadcrumbs = true
-    showSummary = true
-    showTableOfContents = false
-    showCards = true
-    groupByYear = true
+    sharingLinks = ["linkedin", "twitter", "email"]
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
