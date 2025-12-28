@@ -1,23 +1,30 @@
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.15/index.min.css');
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Target photo directly - multiple selectors */
+/* Photo styling - NO distortion, maintains aspect ratio */
+.prose img[alt="Santosh Pandurangan Swamynathan"],
 article img[alt*="Santosh"],
-.article-content img[alt*="Santosh"],
 img[src*="profile.png"] {
-  width: 150px !important;
-  height: 150px !important;
-  object-fit: cover !important;
-  border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  width: 280px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
   float: left !important;
-  margin: 0 1.5rem 1rem 0 !important;
+  margin: 0 2rem 2rem 0 !important;
 }
 
-/* Remove duplicate title */
-.max-w-prose > h1:first-child {
-  display: none;
+/* Clear floats */
+.prose::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Better spacing */
+.prose h2:first-of-type {
+  margin-top: 0;
 }
