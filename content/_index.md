@@ -5,7 +5,9 @@ description: "Senior Site Reliability Engineer @ Microsoft Azure"
 
 ![Santosh Pandurangan Swamynathan](images/profile.png)
 
-## Hi folks 👋
+<div style="clear: both;"></div>
+
+## Hey there 👋
 
 I'm a **Site Reliability Engineer at Microsoft**, working on large-scale GPU infrastructure and reliability engineering.
 
