@@ -31,4 +31,4 @@ Check out my latest writing on SRE, GPU infrastructure, and cloud technologies.
 
 ## About Me
 
-Want to know more? Check out my [About page](/about) or connect with me on [GitHub](https://github.com/Quokkakoala) and [LinkedIn](https://www.linkedin.com/in/santosh-swamynathan/).
+Want to know more? Check out my [About page](/about) or connect with me on [GitHub](https://github.com/Quokkakoala) and [LinkedIn](https://www.linkedin.com/in/santoshpanduranganswamynathan/).

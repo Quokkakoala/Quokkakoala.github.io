@@ -17,6 +17,6 @@ title = "Santosh Pandurangan Swamynathan"
     bio = "I work on large-scale GPU infrastructure and reliability engineering. From healthcare systems to AI platforms, I focus on keeping critical infrastructure running at scale."
     links = [
       { github = "https://github.com/Quokkakoala" },
-      { linkedin = "https://www.linkedin.com/in/santosh-swamynathan/" },
+      { linkedin = "https://www.linkedin.com/in/santoshpanduranganswamynathan/" },
       { email = "mailto:santoshswamynathan@outlook.com" }
     ]

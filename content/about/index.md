@@ -26,7 +26,7 @@ Senior Site Reliability Engineer at Microsoft Azure, specializing in large-scale
 
 **Connect:**
 - GitHub: [Quokkakoala](https://github.com/Quokkakoala) 🦘🐨
-- LinkedIn: [santosh-swamynathan](https://www.linkedin.com/in/santosh-swamynathan/)
+- LinkedIn: [santoshpanduranganswamynathan](https://www.linkedin.com/in/santoshpanduranganswamynathan/)
 - Email: santoshswamynathan@outlook.com
 
 ---
