@@ -1,6 +1,6 @@
 ---
 title: "Pre-Mortem Intelligence: Shifting Left on Reliability with AI"
-date: 2024-12-29
+date: 2026-01-04
 draft: false
 description: "How to fail on paper rather than in production - introducing Prismo, an AI-powered pre-mortem analysis tool that refracts your architecture into a spectrum of risks"
 categories: ["SRE"]
@@ -24,6 +24,7 @@ Continuous improvement doesn't just have to be about fixing known bugs. It can b
 ### What is Shift Left?
 
 The concept is simple: move quality activities earlier in the development lifecycle.
+
 ```
 QUALITY DEVELOPMENT LIFECYCLE
 
@@ -79,6 +80,7 @@ Manual pre-mortem analysis has served us well, but it has limitations. That's wh
 ### The Prism Metaphor
 
 Just like a **prism breaks white light into a visible spectrum**, **Prismo breaks your architecture into a spectrum of risks** — revealing hidden failure modes, categorizing them by type, and making the invisible visible.
+
 ```
     YOUR ARCHITECTURE (white light)
             |
@@ -148,6 +150,7 @@ Here's how Prismo compares to traditional manual pre-mortem analysis:
 | Tracking | Manual follow-up | Integrated workflow |
 
 ### The Math
+
 ```
 Manual Process:
 - 4 weeks elapsed time
@@ -169,6 +172,7 @@ Prismo:
 Let's see how Prismo works with a straightforward application — a Library Management System.
 
 ### The Architecture
+
 ```
                     LIBRARY MANAGEMENT SYSTEM
 
@@ -198,6 +202,7 @@ Let's see how Prismo works with a straightforward application — a Library Mana
 ```
 
 ### The Flow: Architecture to FMEA
+
 ```
 STEP 1: INPUT
 Engineer provides architecture description
@@ -304,6 +309,7 @@ Prismo doesn't just identify risks — it suggests what to do about them.
 The Risk Priority Number determines where to focus your efforts.
 
 ### The Formula
+
 ```
 RPN = Severity x Occurrence x Detection
 
@@ -357,34 +363,50 @@ Where:
 
 After analysis, visualize risks on a criticality heatmap:
 
-<div style="background: #1e293b; padding: 2rem; border-radius: 8px; font-family: monospace; margin: 2rem 0;">
-<pre style="margin: 0; color: #e2e8f0;">
-                          PROBABILITY
-              +------------+------------+------------+
-              |  Unlikely  |   Likely   |  Certain   |
-   +----------+------------+------------+------------+
-   |          |            |            |            |
-   |  <span style="color: #ef4444;">HIGH</span>   |  <span style="background: #dc2626; color: white; padding: 2px 6px;">LIB-002</span>   |  <span style="background: #dc2626; color: white; padding: 2px 6px;">LIB-007</span>   |            |
-   |          |  <span style="background: #dc2626; color: white; padding: 2px 6px;">LIB-006</span>   |  <span style="background: #dc2626; color: white; padding: 2px 6px;">LIB-001</span>   |            |
-   +----------+------------+------------+------------+
-S  |          |            |            |            |
-E  | <span style="color: #f59e0b;">MEDIUM</span>  |  <span style="background: #f59e0b; color: white; padding: 2px 6px;">LIB-005</span>   |  <span style="background: #f59e0b; color: white; padding: 2px 6px;">LIB-003</span>   |            |
-V  |          |            |  <span style="background: #f59e0b; color: white; padding: 2px 6px;">LIB-004</span>   |            |
-E  +----------+------------+------------+------------+
-R  |          |            |            |            |
-I  |  <span style="color: #22c55e;">LOW</span>    |            |            |            |
-T  |          |            |            |            |
-Y  +----------+------------+------------+------------+
-</pre>
-</div>
+```
+RISK PRIORITY MATRIX
+
+                         PROBABILITY
+             Unlikely      Likely       Certain
+           +-----------+-----------+-----------+
+           |           |           |           |
+   HIGH    |  LIB-002  |  LIB-007  |           |
+           |  LIB-006  |  LIB-001  |           |
+           |   [192]   |   [210]   |           |
+           |   [162]   |   [252]   |           |
+           +-----------+-----------+-----------+
+SEVERITY   |           |           |           |
+   MEDIUM  |  LIB-005  |  LIB-003  |           |
+           |   [108]   |  LIB-004  |           |
+           |           |   [150]   |           |
+           |           |   [112]   |           |
+           +-----------+-----------+-----------+
+           |           |           |           |
+   LOW     |           |           |           |
+           |           |           |           |
+           |           |           |           |
+           +-----------+-----------+-----------+
+
+Priority Legend:
+  RED (Critical):    RPN 200-1000 - Fix this sprint
+  ORANGE (Medium):   RPN 100-199  - Plan within quarter  
+  GREEN (Low):       RPN 50-99    - Add to backlog
+```
 
 **Focus on the upper-right quadrant first:** high severity, high probability risks are your top priority.
+
+**Action Items by Priority:**
+1. **LIB-001** (RPN 252) - Secret expiration monitoring - CRITICAL
+2. **LIB-007** (RPN 210) - Centralized logging - CRITICAL
+3. **LIB-002** (RPN 192) - Multi-region deployment
+4. **LIB-006** (RPN 162) - Backup verification
 
 ---
 
 ## Prismo Architecture
 
 Here's how the platform works:
+
 ```
                     PRISMO PLATFORM
 
