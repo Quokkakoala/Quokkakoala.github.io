@@ -1,25 +1,50 @@
 ---
-title: "Pre-Mortem Intelligence: Shifting Left on Reliability with AI"
+title: "Prismo: Pre-Mortem Intelligence for Shifting Left on Reliability with AI"
 date: 2026-01-04
 draft: false
 description: "How to fail on paper rather than in production - introducing Prismo, an AI-powered pre-mortem analysis tool that refracts your architecture into a spectrum of risks"
 categories: ["SRE"]
-tags: ["premortem", "fmea", "shift-left", "risk-management", "ai", "reliability"]
+tags: ["prismo", "premortem", "fmea", "shift-left", "risk-management", "ai", "reliability"]
 ---
 
 ![Prismo Logo](/images/blog/prismo-logo.png)
 
-## Pre-Mortem Intelligence: Shifting Left on Reliability with AI
+## Prismo: Pre-Mortem Intelligence for Shifting Left on Reliability with AI
 
 *How to fail "on paper" rather than in production — and why that mindset matters*
 
 ---
 
+## A Personal Story: How Prismo Shaped My MVP
+
+Before diving into the technical details, let me share why I built Prismo.
+
+I was working on a new product launch at Microsoft, and leadership asked for an MVP estimation. Like many engineers, I had a rough idea of what needed to be built, but I lacked clarity on what could go wrong and where to invest our limited time.
+
+Using an early version of Prismo, I ran a pre-mortem analysis on our proposed architecture. Within 20 minutes, the tool identified 47 potential failure modes I hadn't considered. More importantly, it helped me **prioritize what actually mattered for the MVP**.
+
+Instead of building everything, I focused on the top 5 critical risks:
+- Secret rotation automation (RPN: 245)
+- Multi-region failover (RPN: 210)
+- Rate limiting and backpressure (RPN: 189)
+- Backup verification pipeline (RPN: 156)
+- Centralized logging and alerting (RPN: 152)
+
+These five items became our MVP scope. We shipped on time, with the confidence that we'd addressed the highest-impact risks first. **The product hasn't had a major incident in production since launch.**
+
+That experience taught me: **pre-mortems aren't just risk identification — they're prioritization tools.** Prismo helped me fail on paper, so I didn't have to fail in production.
+
+Now, let me show you how it works.
+
+---
+
 ## Why Pre-Mortem? The Shift Left Mindset
 
-As engineers, we systematically look at why our systems fail and how we can make them better. Pre-mortems are one technique to help us make better choices.
+As engineers, we systematically and repeatedly look at why our systems fail and how we can make them better. Pre-mortems are one technique to help us make better choices.
 
-Continuous improvement doesn't just have to be about fixing known bugs. It can be about actively thinking of what can go wrong *before* it happens.
+Continuous improvement doesn't just have to be about fixing known bugs — it can be about actively thinking of what can go wrong *before* it happens. As we feel the pressure to add new features and expand our services, it's important that our culture continues to change from reactive to proactive.
+
+**We as SRE teams can help. Embrace the fail whale!**
 
 ### What is Shift Left?
 
